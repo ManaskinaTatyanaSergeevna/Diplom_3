@@ -14,6 +14,9 @@ public class RecoverPasswordPage {
     //Заголовок "Восстановление пароля"
     private By recoverPassword = By.xpath(".//main/div/h2[text()='Восстановление пароля']");
 
+    //Ссылка "Войти"
+    private By loginLink = By.xpath(".//div/p/a[@href = '/login' and text() = 'Войти']");
+
     private WebDriver driver;
 
     public RecoverPasswordPage(WebDriver driver){
@@ -32,5 +35,9 @@ public class RecoverPasswordPage {
     public void recoverPassword(String email){
         setEmail(email);
         clickOnRecoverButton();
+    }
+    //Клик по ссылке "Войти
+    public void clickOnLoginLink(){
+        driver.findElement(loginLink).click();
     }
 }

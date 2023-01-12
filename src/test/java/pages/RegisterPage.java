@@ -18,7 +18,7 @@ public class RegisterPage {
     private By registerButton = By.xpath(".//button[text()='Зарегистрироваться']");
 
     //Текст "Некорректный пароль"
-    private By errorPasswordText = By.xpath(".//p[text()='Некорректный пароль']");
+    public By errorPasswordText = By.xpath(".//p[text()='Некорректный пароль']");
 
 
     private WebDriver driver;
