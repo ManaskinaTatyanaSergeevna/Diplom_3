@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage {
 
@@ -12,7 +14,7 @@ public class ProfilePage {
     private By exitButton = By.xpath(".//li/button[text()='Выход']");
 
     //Проверочная надпись для перехода в Личный кабинет
-    private By textOnProfilePage = By.xpath(".//nav/p[text()='В этом разделе вы можете изменить свои персональные данные']");
+    public By textOnProfilePage = By.xpath(".//nav/p[text()='В этом разделе вы можете изменить свои персональные данные']");
 
     private WebDriver driver;
 
@@ -27,6 +29,12 @@ public class ProfilePage {
     //Клик по кнопке выйти
     public void clickOnExitButton(){
         driver.findElement(exitButton).click();
+    }
+
+    public void waitForLoadProfilePage(){
+        // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым
+        new WebDriverWait(driver, 3)
+                .until(ExpectedConditions.visibilityOfElementLocated(textOnProfilePage));
     }
 
 }

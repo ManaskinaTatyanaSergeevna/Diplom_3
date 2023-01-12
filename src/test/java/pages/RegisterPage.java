@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterPage {
 
@@ -19,6 +21,9 @@ public class RegisterPage {
 
     //Текст "Некорректный пароль"
     public By errorPasswordText = By.xpath(".//p[text()='Некорректный пароль']");
+
+    //Текст для проверки перехода на страницу регистрации
+    public By registerText = By.xpath(".//div/h2[text()='Регистрация']");
 
 
     private WebDriver driver;
@@ -49,5 +54,11 @@ public class RegisterPage {
         setEmail(email);
         setPassword(password);
         clickOnRegisterButton();
+    }
+
+    public void waitForLoadRegisterPage(){
+        // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым
+        new WebDriverWait(driver, 3)
+                .until(ExpectedConditions.visibilityOfElementLocated(registerText));
     }
 }

@@ -28,6 +28,7 @@ public class RegistrationTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickOnRegister();
         RegisterPage registerPage = new RegisterPage(driver);
+        registerPage.waitForLoadRegisterPage();
         String name = RandomStringUtils.randomAlphanumeric(4, 8);
         String email = RandomStringUtils.randomAlphanumeric(6, 10) + "@" + RandomStringUtils.randomAlphanumeric(2, 8) + ".ru";
         String password = RandomStringUtils.randomAlphanumeric(10, 20);
@@ -50,6 +51,7 @@ public class RegistrationTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickOnRegister();
         RegisterPage registerPage = new RegisterPage(driver);
+        registerPage.waitForLoadRegisterPage();
         String name = RandomStringUtils.randomAlphanumeric(4, 8);
         String email = RandomStringUtils.randomAlphanumeric(6, 10) + "@" + RandomStringUtils.randomAlphanumeric(2, 8) + ".ru";
         String password = RandomStringUtils.randomAlphanumeric(10, 20);
@@ -73,6 +75,7 @@ public class RegistrationTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickOnRegister();
         RegisterPage registerPage = new RegisterPage(driver);
+        registerPage.waitForLoadRegisterPage();
         String name = RandomStringUtils.randomAlphanumeric(4, 8);
         String email = RandomStringUtils.randomAlphanumeric(6, 10) + "@" + RandomStringUtils.randomAlphanumeric(2, 8) + ".ru";
         String password = RandomStringUtils.randomAlphanumeric(0, 5);
@@ -94,6 +97,7 @@ public class RegistrationTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickOnRegister();
         RegisterPage registerPage = new RegisterPage(driver);
+        registerPage.waitForLoadRegisterPage();
         String name = RandomStringUtils.randomAlphanumeric(4, 8);
         String email = RandomStringUtils.randomAlphanumeric(6, 10) + "@" + RandomStringUtils.randomAlphanumeric(2, 8) + ".ru";
         String password = RandomStringUtils.randomAlphanumeric(0, 5);
