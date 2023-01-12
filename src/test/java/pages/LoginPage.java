@@ -39,22 +39,22 @@ public class LoginPage {
         driver.findElement(passwordField).sendKeys(password);
     }
     //Клик по кнопке "Войти"
-    public void clickOnEntrance(){
-        driver.findElement(entrance).click();
+     public void clickOnLoginButton(){
+        driver.findElement(loginButton).click();
     }
     //Клик по ссылке "Зарегистрироваться"
     public void clickOnRegister(){
         driver.findElement(registerLink).click();
     }
     //Клик по ссылке "Восстановить пароль"
-    public void clickOnForgotPassword(){
+    public void clickOnForgotPasswordLink(){
         driver.findElement(forgotPasswordLink).click();
     }
     //Авторизация пользователя
     public void authorization(String email, String password){
         setEmail(email);
         setPassword(password);
-        clickOnEntrance();
+        clickOnLoginButton();
     }
     public void waitForLoadEntrance(){
         // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым

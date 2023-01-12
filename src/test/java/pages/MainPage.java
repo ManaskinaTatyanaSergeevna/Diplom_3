@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
 
@@ -25,6 +27,8 @@ public class MainPage {
     private By saucesButton = By.xpath(".//span[text()='Соусы']");
     //Кнопка перехода "Начинки"
     private By fillingButton = By.xpath(".//span[text()='Начинки']");
+//текст для проверки видимости на главной странице
+    public By textBurgerMainPage = By.xpath(".//section/h1[text()='Соберите бургер']");
 
 
     public MainPage(WebDriver driver){
@@ -58,5 +62,10 @@ public class MainPage {
     //Клик по кнопке "Начинки"
     public void clickOnFillingButton(){
         driver.findElement(fillingButton).click();
+    }
+
+    public void waitForLoadMainPage(){
+        new WebDriverWait(driver, 3)
+                .until(ExpectedConditions.visibilityOfElementLocated(textBurgerMainPage));
     }
 }
