@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -44,6 +46,8 @@ public class TransitionInConstructorTest {
     }
 
     @Test
+    @DisplayName("Переход в конструктор из личного кабинета.")
+    @Description("Проверка перехода на вкладку 'Конструктор' из страницы авторизации пользователя.")
     public void transitionToConstructorFromProfilePageTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.waitForInvisibilityLoadingAnimation();
@@ -56,6 +60,8 @@ public class TransitionInConstructorTest {
     }
 
     @Test
+    @DisplayName("Переход на вкладку 'Булки'")
+    @Description("Проверяем переход на вкладку 'Булки' и видимость первой картинки с 'булкой'.")
     public void transitionToBunsInConstructorTest() throws InterruptedException {
         MainPage mainPage = new MainPage(driver);
         mainPage.waitForInvisibilityLoadingAnimation();
@@ -65,25 +71,29 @@ public class TransitionInConstructorTest {
         Thread.sleep(100);
         mainPage.clickOnBunsButton();
         mainPage.waitForLoadBunsHeader();
-        Assert.assertTrue("Блок с 'булками' не виден", driver.findElement(mainPage.bunsHeader).isDisplayed());
+        Assert.assertTrue("Блок с 'булками' не виден", driver.findElement(mainPage.bunsImg).isDisplayed());
     }
 
     @Test
+    @DisplayName("Переход на вкладку 'Соусы'")
+    @Description("Проверяем переход на вкладку 'Соусы' и видимость картинки с 'соусом'.")
     public void transitionToSaucesInConstructorTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.waitForInvisibilityLoadingAnimation();
         mainPage.clickOnSaucesButton();
         mainPage.waitForLoadSaucesHeader();
-        Assert.assertTrue("Блок с 'соусами' не виден", driver.findElement(mainPage.saucesHeader).isDisplayed());
+        Assert.assertTrue("Блок с 'соусами' не виден", driver.findElement(mainPage.saucesImg).isDisplayed());
     }
 
     @Test
+    @DisplayName("Переход на вкладку 'Начинки'")
+    @Description("Проверяем переход на вкладку 'Начинки' и видимость картинки с 'начинкой'.")
     public void transitionToFillingsInConstructorTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.waitForInvisibilityLoadingAnimation();
         mainPage.clickOnFillingButton();
         mainPage.waitForLoadFillingsHeader();
-        Assert.assertTrue("Блок с 'соусами' не виден", driver.findElement(mainPage.fillingsHeader).isDisplayed());
+        Assert.assertTrue("Блок с 'соусами' не виден", driver.findElement(mainPage.fillingsImg).isDisplayed());
     }
 
     @After

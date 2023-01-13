@@ -1,0 +1,213 @@
+{
+  "uid" : "e77c19df81d6ee9c",
+  "name" : "Успешная регистрация пользователя.",
+  "fullName" : "tests.RegistrationTest.successRegistrationTest[driver: chromedriver]",
+  "historyId" : "154277590bfc75ebf636805bca61ce5d",
+  "time" : {
+    "start" : 1673624222672,
+    "stop" : 1673624224057,
+    "duration" : 1385
+  },
+  "description" : "Проверяем успешную регистрацию пользователя и видимость текста 'Вход' на странице авторизации.",
+  "descriptionHtml" : "<p>Проверяем успешную регистрацию пользователя и видимость текста 'Вход' на странице авторизации.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверяем успешную регистрацию пользователя и видимость текста 'Вход' на странице авторизации.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Клик по кнопке 'Войти в аккаунт'",
+      "time" : {
+        "start" : 1673624222672,
+        "stop" : 1673624222793,
+        "duration" : 121
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624222746,
+          "stop" : 1673624222793,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+          "time" : {
+            "start" : 1673624222785,
+            "stop" : 1673624222793,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Клик по ссылке 'Зарегистрироваться'",
+      "time" : {
+        "start" : 1673624222793,
+        "stop" : 1673624222894,
+        "duration" : 101
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624222864,
+          "stop" : 1673624222894,
+          "duration" : 30
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем, когда загрузится страница регистрации через текст 'Регистрация'",
+      "time" : {
+        "start" : 1673624222895,
+        "stop" : 1673624222924,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Регистрация пользователя",
+      "time" : {
+        "start" : 1673624222929,
+        "stop" : 1673624223296,
+        "duration" : 367
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624223260,
+          "stop" : 1673624223296,
+          "duration" : 36
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "Xcax"
+      }, {
+        "name" : "email",
+        "value" : "f3wuGzw@FKB8kW.ru"
+      }, {
+        "name" : "password",
+        "value" : "UFKXAzJSsWyt7cCj"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем загрузки элемента с текстом 'Вход'",
+      "time" : {
+        "start" : 1673624223297,
+        "stop" : 1673624223859,
+        "duration" : 562
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 9,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "successRegistrationTest[driver: chromedriver]"
+  }, {
+    "name" : "suite",
+    "value" : "tests.RegistrationTest"
+  }, {
+    "name" : "host",
+    "value" : "SUVOROV-LAPTOP"
+  }, {
+    "name" : "thread",
+    "value" : "27728@SUVOROV-LAPTOP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e77c19df81d6ee9c.json",
+  "parameterValues" : [ ]
+}

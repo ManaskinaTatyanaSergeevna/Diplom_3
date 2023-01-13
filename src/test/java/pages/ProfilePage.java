@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,11 +10,11 @@ public class ProfilePage {
 
     private WebDriver driver;
 
-    //Кнопка "Конструктор"
+    // Кнопка "Конструктор"
     private By constructorButton = By.xpath(".//a[@href='/']/p[text()='Конструктор']");
-    //Кнопка "Выход"
+    // Кнопка "Выход"
     private By exitButton = By.xpath(".//li/button[text()='Выход']");
-    //Проверочная надпись для перехода в Личный кабинет
+    // Проверочная надпись для перехода в Личный кабинет
     public By textOnProfilePage = By.xpath(".//nav/p[text()='В этом разделе вы можете изменить свои персональные данные']");
 
 
@@ -22,23 +23,23 @@ public class ProfilePage {
     }
 
 
-    //Клик по кнопке Конструктор
+    @Step("Клик по кнопке 'Конструктор'")
     public void clickOnConstructorButton(){
         driver.findElement(constructorButton).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //Клик по кнопке выйти
+    @Step("Клик по кнопке выйти")
     public void clickOnExitButton(){
         driver.findElement(exitButton).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //ждем когда загрузится страница личного кабинета с текстом изменения персональных данных
+    @Step("Ждем, когда загрузится страница личного кабинета с текстом изменения персональных данных")
     public void waitForLoadProfilePage(){
         // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOfElementLocated(textOnProfilePage));
     }
-    // ждем когда загрузится страница полностью
+    @Step("Ждем, когда загрузится страница полностью, исчезнет анимация")
     public  void waitForInvisibilityLoadingAnimation() {
         new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.invisibilityOfElementLocated

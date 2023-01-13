@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Assert;
@@ -44,6 +46,8 @@ public class LoginTest {
 
 
     @Test
+    @DisplayName("Авторизация через кнопку 'Войти в аккаунт'.")
+    @Description("Проверяем вход через кнопку 'Войти в аккаунт' и видимость элемента текста 'Соберите бургер' на главной странице.")
     public void authorizationByLoginButtonTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnLoginButton();
@@ -55,6 +59,8 @@ public class LoginTest {
     }
 
     @Test
+    @DisplayName("Авторизация через кнопку 'Личный кабинет'.")
+    @Description("Проверяем вход через кнопку 'Личный кабинет' и видимость элемента текста 'Соберите бургер' на главной странице.")
     public void authorizationByAccountButtonTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
@@ -66,6 +72,8 @@ public class LoginTest {
     }
 
     @Test
+    @DisplayName("Авторизация через форму регистрации.")
+    @Description("Проверяем вход через форму регистрации и видимость элемента текста 'Соберите бургер' на главной странице.")
     public void authorizationByRegisterFormTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnLoginButton();
@@ -84,6 +92,8 @@ public class LoginTest {
     }
 
     @Test
+    @DisplayName("Авторизация через форму восстановления пароля.")
+    @Description("Проверяем вход через форму восстановления пароля и видимость элемента текста 'Соберите бургер' на главной странице.")
     public void authorizationByRecoverPasswordTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();

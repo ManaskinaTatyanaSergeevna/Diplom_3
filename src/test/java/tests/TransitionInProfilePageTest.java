@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -41,6 +43,8 @@ public class TransitionInProfilePageTest {
     }
 
     @Test
+    @DisplayName("Переход на страницу личного кабинета.")
+    @Description("Проверяем переход на страницу авторизации и видимость заголовка 'Вход' на ней.")
     public void transitionToProfilePageTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
@@ -51,6 +55,8 @@ public class TransitionInProfilePageTest {
     }
 
     @Test
+    @DisplayName("Переход на страницу личного кабинета с авторизацией.")
+    @Description("Проверяем переход на страницу личного кабинета зарегистрированного и авторизованного пользователя и видимость заголовка 'Вход' на ней.")
     public void transitionToProfilePageWithAuthUserTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
@@ -66,6 +72,8 @@ public class TransitionInProfilePageTest {
     }
 
     @Test
+    @DisplayName("Клик по логотипу 'Stellar Burgers'")
+    @Description("Проверяем переход на главную страницу, кликнув по логотипу со страницы авторизации, и видимость текста на главной странице 'Соберите бургер'.")
     public void transitionToStellarBurgersFromProfilePageTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
@@ -77,6 +85,8 @@ public class TransitionInProfilePageTest {
     }
 
     @Test
+    @DisplayName("'Выход' из личного кабинета")
+    @Description("Проверяем кнопку 'Выход' в личном кабинете и видимость текста заголовка 'Вход' на странице авторизации.")
     public void exitFromProfileTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();

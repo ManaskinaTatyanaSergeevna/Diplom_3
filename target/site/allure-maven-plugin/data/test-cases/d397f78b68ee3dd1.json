@@ -1,0 +1,174 @@
+{
+  "uid" : "d397f78b68ee3dd1",
+  "name" : "Переход на вкладку 'Соусы'",
+  "fullName" : "tests.TransitionInConstructorTest.transitionToSaucesInConstructorTest[driver: yandexdriver]",
+  "historyId" : "9b44dd0f6de73750b0109b29755de051",
+  "time" : {
+    "start" : 1673624252737,
+    "stop" : 1673624253369,
+    "duration" : 632
+  },
+  "description" : "Проверяем переход на вкладку 'Соусы' и видимость картинки с 'соусом'.",
+  "descriptionHtml" : "<p>Проверяем переход на вкладку 'Соусы' и видимость картинки с 'соусом'.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверяем переход на вкладку 'Соусы' и видимость картинки с 'соусом'.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+      "time" : {
+        "start" : 1673624252737,
+        "stop" : 1673624252776,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+        "time" : {
+          "start" : 1673624252765,
+          "stop" : 1673624252776,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "Клик по кнопке 'Соуса'",
+      "time" : {
+        "start" : 1673624252776,
+        "stop" : 1673624252870,
+        "duration" : 94
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624252832,
+          "stop" : 1673624252870,
+          "duration" : 38
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+          "time" : {
+            "start" : 1673624252857,
+            "stop" : 1673624252870,
+            "duration" : 13
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем, когда загрузится картинка с соусом на главной странице",
+      "time" : {
+        "start" : 1673624252870,
+        "stop" : 1673624252917,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+        "time" : {
+          "start" : 1673624252907,
+          "stop" : 1673624252917,
+          "duration" : 10
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 7,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.TransitionInConstructorTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "transitionToSaucesInConstructorTest[driver: yandexdriver]"
+  }, {
+    "name" : "suite",
+    "value" : "tests.TransitionInConstructorTest"
+  }, {
+    "name" : "host",
+    "value" : "SUVOROV-LAPTOP"
+  }, {
+    "name" : "thread",
+    "value" : "27728@SUVOROV-LAPTOP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d397f78b68ee3dd1.json",
+  "parameterValues" : [ ]
+}

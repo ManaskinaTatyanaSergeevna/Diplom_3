@@ -1,0 +1,291 @@
+{
+  "uid" : "e5547b35372c08b0",
+  "name" : "Переход на страницу личного кабинета с авторизацией.",
+  "fullName" : "tests.TransitionInProfilePageTest.transitionToProfilePageWithAuthUserTest[driver: yandexdriver]",
+  "historyId" : "712abe1c8fe11fe586a86a304ced55dc",
+  "time" : {
+    "start" : 1673624285449,
+    "stop" : 1673624287548,
+    "duration" : 2099
+  },
+  "description" : "Проверяем переход на страницу личного кабинета зарегистрированного и авторизованного пользователя и видимость заголовка 'Вход' на ней.",
+  "descriptionHtml" : "<p>Проверяем переход на страницу личного кабинета зарегистрированного и авторизованного пользователя и видимость заголовка 'Вход' на ней.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверяем переход на страницу личного кабинета зарегистрированного и авторизованного пользователя и видимость заголовка 'Вход' на ней.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Клик по кнопке 'Личный кабинет'",
+      "time" : {
+        "start" : 1673624285449,
+        "stop" : 1673624285552,
+        "duration" : 103
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624285514,
+          "stop" : 1673624285552,
+          "duration" : 38
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+          "time" : {
+            "start" : 1673624285542,
+            "stop" : 1673624285552,
+            "duration" : 10
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем загрузки элемента с текстом 'Вход'",
+      "time" : {
+        "start" : 1673624285552,
+        "stop" : 1673624285593,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Авторизация пользователя",
+      "time" : {
+        "start" : 1673624285593,
+        "stop" : 1673624286416,
+        "duration" : 823
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ввод Email-а",
+        "time" : {
+          "start" : 1673624285593,
+          "stop" : 1673624285689,
+          "duration" : 96
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "test-data@yandex.ru"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Ввод пароля",
+        "time" : {
+          "start" : 1673624285689,
+          "stop" : 1673624285778,
+          "duration" : 89
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "password"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Клик по кнопке 'Войти'",
+        "time" : {
+          "start" : 1673624285778,
+          "stop" : 1673624286416,
+          "duration" : 638
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+          "time" : {
+            "start" : 1673624285835,
+            "stop" : 1673624286416,
+            "duration" : 581
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "test-data@yandex.ru"
+      }, {
+        "name" : "password",
+        "value" : "password"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 4,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем, когда загрузится главная страница и будет виден текст 'Соберите бургер'",
+      "time" : {
+        "start" : 1673624286416,
+        "stop" : 1673624286447,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Клик по кнопке 'Личный кабинет'",
+      "time" : {
+        "start" : 1673624286447,
+        "stop" : 1673624287081,
+        "duration" : 634
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624286495,
+          "stop" : 1673624287081,
+          "duration" : 586
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+          "time" : {
+            "start" : 1673624287069,
+            "stop" : 1673624287081,
+            "duration" : 12
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем, когда загрузится страница личного кабинета с текстом изменения персональных данных",
+      "time" : {
+        "start" : 1673624287081,
+        "stop" : 1673624287116,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 14,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.TransitionInProfilePageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "transitionToProfilePageWithAuthUserTest[driver: yandexdriver]"
+  }, {
+    "name" : "suite",
+    "value" : "tests.TransitionInProfilePageTest"
+  }, {
+    "name" : "host",
+    "value" : "SUVOROV-LAPTOP"
+  }, {
+    "name" : "thread",
+    "value" : "27728@SUVOROV-LAPTOP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e5547b35372c08b0.json",
+  "parameterValues" : [ ]
+}

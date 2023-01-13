@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Assert;
@@ -40,6 +42,8 @@ public class RegistrationTest {
     }
 
     @Test
+    @DisplayName("Успешная регистрация пользователя.")
+    @Description("Проверяем успешную регистрацию пользователя и видимость текста 'Вход' на странице авторизации.")
     public void successRegistrationTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnLoginButton();
@@ -58,6 +62,8 @@ public class RegistrationTest {
 
 
     @Test
+    @DisplayName("Неуспешная регистрация пользователя.")
+    @Description("Проверяем неуспешную регистрацию пользователя и ловим ошибку текста 'Некорректный пароль' на странице регистрации при вводе пароля меньше 6 символов.")
     public void failedRegistrationTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnLoginButton();

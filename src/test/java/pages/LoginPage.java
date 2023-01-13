@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,52 +33,52 @@ public class LoginPage {
     }
 
 
-    //Ввод Email-а
+    @Step("Ввод Email-а")
     public void setEmail(String email){
         driver.findElement(emailField).sendKeys(email);
     }
-    //Ввод пароля
+    @Step("Ввод пароля")
     public void setPassword(String password){
         driver.findElement(passwordField).sendKeys(password);
     }
-    //Клик по кнопке "Войти"
+    @Step("Клик по кнопке 'Войти'")
      public void clickOnLoginButton(){
         driver.findElement(loginButton).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //Клик по ссылке "Зарегистрироваться"
+    @Step("Клик по ссылке 'Зарегистрироваться'")
     public void clickOnRegister(){
         driver.findElement(registerLink).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //Клик по ссылке "Восстановить пароль"
+    @Step("Клик по ссылке 'Восстановить пароль'")
     public void clickOnForgotPasswordLink(){
         driver.findElement(forgotPasswordLink).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //Клик по кнопке "Конструктор"
+    @Step("Клик по кнопке 'Конструктор'")
     public void clickOnConstructorButton(){
         driver.findElement(constructorButton).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //Клик по кнопке "Stellar Burgers"
+    @Step("Клик по кнопке 'Stellar Burgers'")
     public void clickOnLogo() {
         driver.findElement(logo).click();
         waitForInvisibilityLoadingAnimation();
     }
-    //Авторизация пользователя
+    @Step("Авторизация пользователя")
     public void authorization(String email, String password){
         setEmail(email);
         setPassword(password);
         clickOnLoginButton();
     }
-    //ждем загрузки элемента с текстом "Вход"
+    @Step("Ждем загрузки элемента с текстом 'Вход'")
     public void waitForLoadEntrance(){
         // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOfElementLocated(entrance));
     }
-    // ждем когда загрузится страница полностью, исчезнет анимация
+    @Step("Ждем, когда загрузится страница полностью, исчезнет анимация")
     public  void waitForInvisibilityLoadingAnimation() {
         new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.invisibilityOfElementLocated

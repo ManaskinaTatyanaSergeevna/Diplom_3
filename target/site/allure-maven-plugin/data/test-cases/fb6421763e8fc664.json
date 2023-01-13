@@ -1,0 +1,216 @@
+{
+  "uid" : "fb6421763e8fc664",
+  "name" : "Авторизация через кнопку 'Личный кабинет'.",
+  "fullName" : "tests.LoginTest.authorizationByAccountButtonTest[driver: yandexdriver]",
+  "historyId" : "a8dc25f08e7e8ee4a0b3bedc5b58a018",
+  "time" : {
+    "start" : 1673624207712,
+    "stop" : 1673624209104,
+    "duration" : 1392
+  },
+  "description" : "Проверяем вход через кнопку 'Личный кабинет' и видимость элемента текста 'Соберите бургер' на главной странице.",
+  "descriptionHtml" : "<p>Проверяем вход через кнопку 'Личный кабинет' и видимость элемента текста 'Соберите бургер' на главной странице.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверяем вход через кнопку 'Личный кабинет' и видимость элемента текста 'Соберите бургер' на главной странице.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Клик по кнопке 'Личный кабинет'",
+      "time" : {
+        "start" : 1673624207712,
+        "stop" : 1673624207820,
+        "duration" : 108
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+        "time" : {
+          "start" : 1673624207779,
+          "stop" : 1673624207820,
+          "duration" : 41
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, дополнительный метод ожидания",
+          "time" : {
+            "start" : 1673624207812,
+            "stop" : 1673624207820,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Авторизация пользователя",
+      "time" : {
+        "start" : 1673624207820,
+        "stop" : 1673624208657,
+        "duration" : 837
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ввод Email-а",
+        "time" : {
+          "start" : 1673624207820,
+          "stop" : 1673624207932,
+          "duration" : 112
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "test-data@yandex.ru"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Ввод пароля",
+        "time" : {
+          "start" : 1673624207933,
+          "stop" : 1673624208015,
+          "duration" : 82
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "password"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Клик по кнопке 'Войти'",
+        "time" : {
+          "start" : 1673624208015,
+          "stop" : 1673624208657,
+          "duration" : 642
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ждем, когда загрузится страница полностью, исчезнет анимация",
+          "time" : {
+            "start" : 1673624208065,
+            "stop" : 1673624208657,
+            "duration" : 592
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "test-data@yandex.ru"
+      }, {
+        "name" : "password",
+        "value" : "password"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 4,
+      "hasContent" : true
+    }, {
+      "name" : "Ждем, когда загрузится главная страница и будет виден текст 'Соберите бургер'",
+      "time" : {
+        "start" : 1673624208658,
+        "stop" : 1673624208688,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 9,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "authorizationByAccountButtonTest[driver: yandexdriver]"
+  }, {
+    "name" : "suite",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "SUVOROV-LAPTOP"
+  }, {
+    "name" : "thread",
+    "value" : "27728@SUVOROV-LAPTOP.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fb6421763e8fc664.json",
+  "parameterValues" : [ ]
+}
