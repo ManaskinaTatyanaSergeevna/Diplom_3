@@ -1,6 +1,5 @@
 package tests;
 
-import io.qameta.allure.internal.shadowed.jackson.annotation.JsonTypeInfo;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Assert;
@@ -9,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.RecoverPasswordPage;
@@ -26,11 +26,15 @@ public class LoginTest {
         this.driverType = driverType;
         System.setProperty(
                 "webdriver.chrome.driver",
-                "C:\\Users\\danii\\IdeaProjects\\ЯндексПроектики\\diplom\\Diplom_3\\src\\main\\resources\\drivers\\" + this.driverType + ".exe"
+                "src\\main\\resources\\drivers\\" + this.driverType + ".exe"
         );
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        driver = new ChromeDriver(options);
+        driver.get("https://stellarburgers.nomoreparties.site");
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name="driver: {0}")
     public static Object[][] getDriver(){
         return new Object[][]{
                 {"chromedriver"},
@@ -41,32 +45,28 @@ public class LoginTest {
 
     @Test
     public void authorizationByLoginButtonTest(){
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnLoginButton();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.authorization(EMAIL, PASSWORD);
         mainPage.waitForLoadMainPage();
-        Assert.assertTrue("Авторизация не прошла успешно", driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
+        Assert.assertTrue("Авторизация не прошла успешно",
+                driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
     }
 
     @Test
     public void authorizationByAccountButtonTest(){
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.authorization(EMAIL,PASSWORD);
         mainPage.waitForLoadMainPage();
-        Assert.assertTrue("Авторизация не прошла успешно", driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
+        Assert.assertTrue("Авторизация не прошла успешно",
+                driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
     }
 
     @Test
     public void authorizationByRegisterFormTest(){
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnLoginButton();
         LoginPage loginPage = new LoginPage(driver);
@@ -79,13 +79,12 @@ public class LoginTest {
         loginPage.waitForLoadEntrance();
         loginPage.authorization(email, password);
         mainPage.waitForLoadMainPage();
-        Assert.assertTrue("Авторизация не прошла успешно", driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
+        Assert.assertTrue("Авторизация не прошла успешно",
+                driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
     }
 
     @Test
     public void authorizationByRecoverPasswordTest(){
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
         LoginPage loginPage = new LoginPage(driver);
@@ -94,7 +93,8 @@ public class LoginTest {
         recoverPasswordPage.clickOnLoginLink();
         loginPage.authorization(EMAIL,PASSWORD);
         mainPage.waitForLoadMainPage();
-        Assert.assertTrue("Авторизация не прошла успешно", driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
+        Assert.assertTrue("Авторизация не прошла успешно",
+                driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
     }
 
     @After

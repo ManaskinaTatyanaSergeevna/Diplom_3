@@ -7,34 +7,42 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage {
 
+    private WebDriver driver;
+
     //Кнопка "Конструктор"
     private By constructorButton = By.xpath(".//a[@href='/']/p[text()='Конструктор']");
-
     //Кнопка "Выход"
     private By exitButton = By.xpath(".//li/button[text()='Выход']");
-
     //Проверочная надпись для перехода в Личный кабинет
     public By textOnProfilePage = By.xpath(".//nav/p[text()='В этом разделе вы можете изменить свои персональные данные']");
 
-    private WebDriver driver;
 
     public ProfilePage(WebDriver driver){
         this.driver = driver;
     }
 
+
     //Клик по кнопке Конструктор
     public void clickOnConstructorButton(){
         driver.findElement(constructorButton).click();
+        waitForInvisibilityLoadingAnimation();
     }
     //Клик по кнопке выйти
     public void clickOnExitButton(){
         driver.findElement(exitButton).click();
+        waitForInvisibilityLoadingAnimation();
     }
-
+    //ждем когда загрузится страница личного кабинета с текстом изменения персональных данных
     public void waitForLoadProfilePage(){
         // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOfElementLocated(textOnProfilePage));
+    }
+    // ждем когда загрузится страница полностью
+    public  void waitForInvisibilityLoadingAnimation() {
+        new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.invisibilityOfElementLocated
+                        (By.xpath(".//img[@src='./static/media/loading.89540200.svg' and @alt='loading animation']")));
     }
 
 }

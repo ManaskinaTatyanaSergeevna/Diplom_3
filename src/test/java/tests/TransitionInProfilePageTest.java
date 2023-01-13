@@ -1,29 +1,47 @@
 package tests;
 
-import io.qameta.allure.internal.shadowed.jackson.annotation.JsonTypeInfo;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.ProfilePage;
 
+@RunWith(Parameterized.class)
 public class TransitionInProfilePageTest {
 
     private WebDriver driver;
+    private String driverType;
     private final static String EMAIL = "test-data@yandex.ru";
     private final static String PASSWORD = "password";
 
-    @Test
-    public void transitionToProfilePageChromeTest(){
+    public TransitionInProfilePageTest(String driverType){
+        this.driverType = driverType;
         System.setProperty(
                 "webdriver.chrome.driver",
-                "C:\\Users\\danii\\IdeaProjects\\ЯндексПроектики\\diplom\\Diplom_3\\src\\main\\resources\\drivers\\chromedriver.exe"
+                "src\\main\\resources\\drivers\\" + this.driverType + ".exe"
         );
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site");
+    }
+
+    @Parameterized.Parameters(name="driver: {0}")
+    public static Object[][] getDriver(){
+        return new Object[][]{
+                {"chromedriver"},
+                {"yandexdriver"},
+        };
+    }
+
+    @Test
+    public void transitionToProfilePageTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
         LoginPage loginPage = new LoginPage(driver);
@@ -33,29 +51,7 @@ public class TransitionInProfilePageTest {
     }
 
     @Test
-    public void transitionToProfilePageYandexTest(){
-        System.setProperty(
-                "webdriver.chrome.driver",
-                "C:\\Users\\danii\\IdeaProjects\\ЯндексПроектики\\diplom\\Diplom_3\\src\\main\\resources\\drivers\\yandexdriver.exe"
-        );
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
-        MainPage mainPage = new MainPage(driver);
-        mainPage.clickOnAccountButton();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.waitForLoadEntrance();
-        Assert.assertTrue("Страница авторизации не отобразилась.",
-                driver.findElement(loginPage.entrance).isDisplayed());
-    }
-
-    @Test
-    public void transitionToProfilePageWithAuthUserChromeTest(){
-        System.setProperty(
-                "webdriver.chrome.driver",
-                "C:\\Users\\danii\\IdeaProjects\\ЯндексПроектики\\diplom\\Diplom_3\\src\\main\\resources\\drivers\\chromedriver.exe"
-        );
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
+    public void transitionToProfilePageWithAuthUserTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
         LoginPage loginPage = new LoginPage(driver);
@@ -70,24 +66,30 @@ public class TransitionInProfilePageTest {
     }
 
     @Test
-    public void transitionToProfilePageWithAuthUserYandexTest(){
-        System.setProperty(
-                "webdriver.chrome.driver",
-                "C:\\Users\\danii\\IdeaProjects\\ЯндексПроектики\\diplom\\Diplom_3\\src\\main\\resources\\drivers\\yandexdriver.exe"
-        );
-        driver = new ChromeDriver();
-        driver.get("https://stellarburgers.nomoreparties.site");
+    public void transitionToStellarBurgersFromProfilePageTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOnAccountButton();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.waitForLoadEntrance();
-        loginPage.authorization(EMAIL, PASSWORD);
+        loginPage.clickOnLogo();
+        mainPage.waitForLoadMainPage();
+        Assert.assertTrue("Главная страница не загрузилась", driver.findElement(mainPage.textBurgerMainPage).isDisplayed());
+    }
+
+    @Test
+    public void exitFromProfileTest(){
+        MainPage mainPage = new MainPage(driver);
+        mainPage.clickOnAccountButton();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.waitForLoadEntrance();
+        loginPage.authorization(EMAIL,PASSWORD);
         mainPage.waitForLoadMainPage();
         mainPage.clickOnAccountButton();
         ProfilePage profilePage = new ProfilePage(driver);
         profilePage.waitForLoadProfilePage();
-        Assert.assertTrue("Страница личного кабинета не прогрузилась",
-                driver.findElement(profilePage.textOnProfilePage).isDisplayed());
+        profilePage.clickOnExitButton();
+        mainPage.waitForInvisibilityLoadingAnimation();
+        Assert.assertTrue("Не удалось выйти из аккаунта", driver.findElement(loginPage.entrance).isDisplayed());
     }
 
     @After

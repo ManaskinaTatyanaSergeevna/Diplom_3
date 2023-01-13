@@ -7,30 +7,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterPage {
 
+    private WebDriver driver;
+
     //Поле "Имя"
     private By nameField = By.xpath(".//div[./label[text()='Имя']]/input[@name='name']");
-
-    //Поле "Email"
+    //Поле Email"
     private By emailField = By.xpath(".//div[./label[text()='Email']]/input[@name='name']");
-
     //Поле "Пароль"
     private By passwordField = By.xpath(".//div[./label[text()='Пароль']]/input[@name='Пароль']");
-
     //Кнопка "Зарегистрироваться"
     private By registerButton = By.xpath(".//button[text()='Зарегистрироваться']");
-
     //Текст "Некорректный пароль"
     public By errorPasswordText = By.xpath(".//p[text()='Некорректный пароль']");
-
     //Текст для проверки перехода на страницу регистрации
     public By registerText = By.xpath(".//div/h2[text()='Регистрация']");
 
 
-    private WebDriver driver;
-
     public RegisterPage(WebDriver driver){
         this.driver = driver;
     }
+
 
     //Ввод имени
     public void setName(String name){
@@ -47,6 +43,7 @@ public class RegisterPage {
     //Клик по кнопке "Зарегистрироваться"
     public void clickOnRegisterButton(){
         driver.findElement(registerButton).click();
+        waitForInvisibilityLoadingAnimation();
     }
     //Регистрация пользователя
     public void registration(String name, String email, String password){
@@ -55,10 +52,15 @@ public class RegisterPage {
         setPassword(password);
         clickOnRegisterButton();
     }
-
+    //ждем когда загрузится страница регистрации через текст "регистрация"
     public void waitForLoadRegisterPage(){
-        // подожди 3 секунды, чтобы элемент с нужным текстом стал видимым
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOfElementLocated(registerText));
+    }
+    // ждем когда загрузится страница полностью, исчезнет анимация
+    public  void waitForInvisibilityLoadingAnimation() {
+        new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.invisibilityOfElementLocated
+                        (By.xpath(".//img[@src='./static/media/loading.89540200.svg' and @alt='loading animation']")));
     }
 }
